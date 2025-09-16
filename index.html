@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>Working With Numbers</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f9a8d4, #fbcfe8);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            text-align: center;
+            width: 320px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #1f2937;
+        }
+
+        input[type="number"] {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #ec4899;
+            box-shadow: 0 0 6px rgba(236, 72, 153, 0.4);
+            outline: none;
+        }
+
+        input[type="button"] {
+            margin-top: 15px;
+            padding: 12px 25px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        input[value="Calculate"] {
+            background: #ec4899;
+        }
+
+        input[value="Calculate"]:hover {
+            background: #db2777;
+            transform: scale(1.05);
+        }
+
+        input[value="Refresh"] {
+            background: #9ca3af;
+            margin-left: 5px;
+        }
+
+        input[value="Refresh"]:hover {
+            background: #6b7280;
+            transform: scale(1.05);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #374151;
+            background: #fce7f3;
+            padding: 12px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Trapezoid Area Calculator</h2>
+        <input type="number" id="a" placeholder="Enter your value for a"><br>
+        <input type="number" id="b" placeholder="Enter your value for b"><br>
+        <input type="number" id="h" placeholder="Enter your value for h"><br>
+        <input type="button" value="Calculate" py-click="adding_numbers"> 
+        <input type="button" value="Refresh" onclick="location.reload()">
+        <div id="output"></div>
+    </form>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
